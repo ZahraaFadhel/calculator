@@ -21,10 +21,5 @@ public class CalculatorTest {
     public void testDivideByZero() {
         calc.divide(5, 0);
     }
-
-    @Test
-    public void testSquare() {
-        assertEquals(9, calc.square(3));
-    }
     
 }

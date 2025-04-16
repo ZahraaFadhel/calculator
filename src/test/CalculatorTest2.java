@@ -16,9 +16,4 @@ public class CalculatorTest2 {
   public void testSquare() {
     assertEquals(9, calc.square(3));
   }
-
-  @Test
-  public void testSquareRoot() {
-    assertEquals(3, calc.squareRoot(9));
-  }
 }

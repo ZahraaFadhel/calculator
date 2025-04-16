@@ -2,7 +2,7 @@ name: Java CI with JUnit
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [master]
 
 jobs:
   test:

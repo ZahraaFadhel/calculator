@@ -28,8 +28,8 @@ jobs:
 
       - name: Compile tests
         run: |
-          javac -d bin-tests -cp "bin:lib/junit.jar" src/test/CalculatorTest.java
+          javac -d bin-tests -cp "bin:lib/junit.jar" src/test/CalculatorTest1.java src/test/CalculatorTest2.java
 
       - name: Run tests
         run: |
-          java -cp "bin:bin-tests:lib/junit.jar" org.junit.runner.JUnitCore CalculatorTest
+          java -cp "bin:bin-tests:lib/junit.jar" org.junit.runner.JUnitCore test.CalculatorTest1 test.CalculatorTest2

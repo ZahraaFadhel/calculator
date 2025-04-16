@@ -16,5 +16,4 @@ public class CalculatorTest2 {
   public void testSquare() {
     assertEquals(9, calc.square(3));
   }
-
 }

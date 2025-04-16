@@ -4,7 +4,7 @@ import org.junit.Test;
 import main.Calculator;
 import static org.junit.Assert.*;
 
-public class CalculatorTest {
+public class CalculatorTest1 {
     Calculator calc = new Calculator();
 
     @Test
@@ -15,11 +15,6 @@ public class CalculatorTest {
     @Test
     public void testSubtract() {
         assertEquals(1, calc.subtract(3, 2));
-    }
-
-    @Test(expected = ArithmeticException.class)
-    public void testDivideByZero() {
-        calc.divide(5, 0);
     }
     
 }

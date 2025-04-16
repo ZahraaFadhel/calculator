@@ -2,13 +2,13 @@ name: Java CI with JUnit
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [master]
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4  # Checkout code
+      - uses: actions/checkout@v4
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -23,8 +23,7 @@ jobs:
 
       - name: Compile main code
         run: |
-          find src/main -name "*.java" > sources.txt
-          javac -d bin @sources.txt
+          javac -d bin src/main/Calculator.java
 
       - name: Compile tests
         run: |
@@ -32,4 +31,4 @@ jobs:
 
       - name: Run tests
         run: |
-          java -cp "bin:bin-tests:lib/junit.jar" org.junit.runner.JUnitCore CalculatorTest
+          java -cp "bin:bin-tests:lib/junit.jar" CalculatorTest

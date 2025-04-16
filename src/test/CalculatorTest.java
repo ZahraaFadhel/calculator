@@ -1,9 +1,7 @@
 package test;
 
 import org.junit.Test;
-
 import main.Calculator;
-
 import static org.junit.Assert.*;
 
 public class CalculatorTest {
@@ -23,4 +21,10 @@ public class CalculatorTest {
     public void testDivideByZero() {
         calc.divide(5, 0);
     }
+
+    @Test
+    public void testSquare() {
+        assertEquals(9, calc.square(3));
+    }
+    
 }

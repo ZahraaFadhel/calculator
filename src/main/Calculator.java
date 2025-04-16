@@ -16,8 +16,4 @@ public class Calculator {
       if (b == 0) throw new ArithmeticException("Cannot divide by zero!");
       return a / b;
   }
-
-  public int square(int a) {
-      return a * a;
-  }
 }

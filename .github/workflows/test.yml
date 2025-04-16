@@ -23,12 +23,12 @@ jobs:
 
       - name: Compile main code
         run: |
-          find src/main/java -name "*.java" > sources.txt
+          find src/main -name "*.java" > sources.txt
           javac -d bin @sources.txt
 
       - name: Compile tests
         run: |
-          javac -d bin-tests -cp "bin:lib/junit.jar" src/test/java/CalculatorTest.java
+          javac -d bin-tests -cp "bin:lib/junit.jar" src/test/CalculatorTest.java
 
       - name: Run tests
         run: |
